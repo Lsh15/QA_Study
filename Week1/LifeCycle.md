@@ -22,9 +22,35 @@ onDestroy()는 활동이 소멸되기 전에 호출된다. 사용자가 Activity
 Activity가 중단되었다가 다시 시작되기 직전에 호출된다. onRestart() 뒤에는 항상 onStart() 가 호출된다.
 
 # Fragment LifeCycle
-![image](https://user-images.githubusercontent.com/50148363/192920677-243e67d6-8003-4737-84c7-b1ba0fc5862a.png)
+![image](https://user-images.githubusercontent.com/50148363/193223786-ccd6c1c9-1602-4471-a65a-7db41bc63848.png)
+## onAttach()
+Fragment가 Activity와 연결될 때 호출된다. Fragment가 완벽하게 생성된 상태는 아니다.
+## onCreate()
+프래그먼트를 생성할 때 시스템에서 이것을 호출한다. 프래그먼트의 기본 구성 요소 중 프래그먼트가 일시정지되거나 중단되었다가 재개되었을 때 유지하고자 하는 것을 초기화해야 한다. Activity와는 달리 Fragment의 onCreate()에서는 view와 관련된 UI작업을 할 수 없다.
+
+## onCreateVIew()
+프래그먼트가 사용자 인터페이스를 처음으로 그릴 시간이 되면 호출한다. Layout을 inflate해서 반환해주고, view 객체를 얻을 수 있으므로 UI와 관련된 바인딩 작업을 실행하면 된다. onCreateVIew() 메서드는 프래그먼트 레이아웃의 루트입니다. 프래그먼트가 UI를 제공하지 않는 경우 null을 반환하면 됩니다.
+ 
+## onViewCreated()
+
+## onStart()
+
+## onResume()
+
+## onPause()
+
+## onStop()
+
+## onDestroyView()
+
+## onDestory()
+
+## onDetach() 
 
 
 ### 참고 자료
 https://math-coding.tistory.com/238   
-https://developer.android.com/guide/components/activities/activity-lifecycle?hl=ko   
+https://developer.android.com/guide/components/activities/activity-lifecycle?hl=ko      
+https://developer.android.com/guide/components/fragments
+https://jinee0717.tistory.com/44
+https://zibro.tistory.com/13
