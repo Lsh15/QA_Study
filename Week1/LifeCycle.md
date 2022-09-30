@@ -61,8 +61,8 @@ Fragment가 완전히 소멸되고, Activity와의 연결도 끊어질 때 실�
 
 
 ### 참고 자료
-https://math-coding.tistory.com/238   
-https://developer.android.com/guide/components/activities/activity-lifecycle?hl=ko      
-https://developer.android.com/guide/fragments/lifecycle
-https://jinee0717.tistory.com/44
-https://zibro.tistory.com/13
+https://math-coding.tistory.com/238    
+https://developer.android.com/guide/components/activities/activity-lifecycle?hl=ko   
+https://developer.android.com/guide/fragments/lifecycle   
+https://jinee0717.tistory.com/44   
+https://zibro.tistory.com/13   
