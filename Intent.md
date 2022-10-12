@@ -25,11 +25,15 @@ PendingIntent는 Intent를 가지고 있는 클래스로, 기본 목적은 다�
 
 ### * Pending Intent (보류 인텐트)의 사용 사례
 * Notification으로 작업을 수행할 때 Pending Intent (보류 인텐트)를 사용한다. 
-* 바탕화면의 위젯으로 Intent 작업을 수행할 때 Pending Intent (보류 인텐트)를 사용한다.
+* 메인화면의 위젯으로 Intent 작업을 수행할 때 Pending Intent (보류 인텐트)를 사용한다.
 * AlarmManager를 통해 지정된 시간에 Intent가 시작되도록 할때 Pending Intent (보류 인텐트)를 사용힌다.
 
-
+### * PendingIntent 생성하는방법
+* Activity를 시작하는 Intent의 경우, PendingIntent.getActivity()
+* Service를 시작하는 Intent의 경우, PendingIntent.getService()
+* BroadcastReceiver를 시작하는 Intent의 경우, PendingIntent.getBroadcast()
 
 ### 참고
 https://developer.android.com/guide/components/intents-filters   
 https://velog.io/@skydoves/2022-android-developer-roadmap-part2   
+https://www.charlezz.com/?p=861   
