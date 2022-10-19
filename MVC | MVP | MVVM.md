@@ -58,6 +58,8 @@ View에서 요청한 정보를 Model로부터 가공하여 View로 전달하는 
 * View마다 Presenter가 존재하게 되고 코드량이 많아져 유지 보수의 어려움 
 
 ## MVVM (Model - View – ViewModel)
+![image](https://user-images.githubusercontent.com/50148363/196659211-017b9418-662e-4908-a686-903f64dfda73.png)
+
 ### 구조
 * Model
 
@@ -77,6 +79,5 @@ View에서 요청한 정보를 Model로부터 가공하여 View로 전달하는 
 ### 단점
 *
 *
-
 
 
