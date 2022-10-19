@@ -28,27 +28,34 @@
 * Controller에 많은 코드가 모이게 되어 Activity의 비대화
 
 ## MVP (Model - View - Presenter)
+![image](https://user-images.githubusercontent.com/50148363/196639035-f055f047-f346-424b-9863-700dfaf3fe33.png)
+
 ### 구조
-* Model
+* Model   
+독립적인 영역으로 앱에서 사용되는 실제 데이터 및 데이터 조작 로직을 처리하는 부분
 
-* View
+* View   
+사용자에게 보여지는 UI부분
 
-* Presenter
+* Presenter   
+Model과 View사이의 매개체   
+View에서 요청한 정보를 Model로부터 가공하여 View로 전달하는 부분
 
 ### 동작
-1.
-2.
-
+1. Action들은 View를 통해 들어온다.   
+2. View는 데이터를 Presenter에게 요청한다.   
+3. Presenter는 Model에게 데이터를 요청한다.   
+4. Model은 Presenter에서 요청받은 데이터를 응답한다.   
+5. Presenter는 View에게 데이터를 응답한다.   
+6. View는 Presenter가 응답한 데이터를 이용하여 화면을 나타낸다.
 
 ### 장점
-*
-*
-
+* Presentor를 통해서 데이터를 전달받기 때문에 View와 Model의 의존성 없음
+* MVC 단점을 해결
 
 ### 단점
-*
-*
-
+* View와 Presenter 사이의 높은 의존성
+* View마다 Presenter가 존재하게 되고 코드량이 많아져 유지 보수의 어려움 
 
 ## MVVM (Model - View – ViewModel)
 ### 구조
