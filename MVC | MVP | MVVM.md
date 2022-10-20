@@ -72,9 +72,11 @@ View를 표현하기 위해 만들어진 View를 위한 Model
 View를 나타내 주기 위한 Model이자 View를 나타내기 위한 데이터 처리를 하는 부분
 
 ### 동작
-1.
-2.
-
+1. Action이 View에 입력이 들어오면 Command 패턴으로 ViewModel에 명령 전달한다.
+2. ViewModel은 필요한 데이터를 Model에 요청한다.
+3. Model은 ViewModel에 필요한 데이터를 응답한다.
+4. ViewModel은 응답받은 데이터를 가공해서 저장한다.
+5. View는 ViewModel과의 Data Binding으로 인해 자동으로 갱신한다.
 
 ### 장점
 *
