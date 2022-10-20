@@ -4,7 +4,7 @@
 
 ### 구조
 * Model   
-앱에서 사용되는 실제 데이터 및 데이터 조작 로직을 처리하는 부분
+독립적인 영역으로 앱에서 사용되는 실제 데이터 및 데이터 조작 로직을 처리하는 부분
 
 * View   
 사용자에게 보여지는 UI부분
@@ -61,11 +61,15 @@ View에서 요청한 정보를 Model로부터 가공하여 View로 전달하는 
 ![image](https://user-images.githubusercontent.com/50148363/196659211-017b9418-662e-4908-a686-903f64dfda73.png)
 
 ### 구조
-* Model
+* Model   
+독립적인 영역으로 앱에서 사용되는 실제 데이터 및 데이터 조작 로직을 처리하는 부분
 
-* View
+* View   
+사용자에게 보여지는 UI부분
 
-* ViewModel
+* ViewModel   
+View를 표현하기 위해 만들어진 View를 위한 Model   
+View를 나타내 주기 위한 Model이자 View를 나타내기 위한 데이터 처리를 하는 부분
 
 ### 동작
 1.
