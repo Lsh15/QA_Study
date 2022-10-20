@@ -79,11 +79,11 @@ View를 나타내 주기 위한 Model이자 View를 나타내기 위한 데이�
 5. View는 ViewModel과의 Data Binding으로 인해 자동으로 갱신한다.
 
 ### 장점
-*
-*
+* View와 Model 사이의 의존성 없음
+* View와 View model 사이의 의존성 없음
+* 중복되는 코드를 모듈화하여 개발
 
 ### 단점
-*
-*
+* ViewModel 설계의 어려움
 
 
