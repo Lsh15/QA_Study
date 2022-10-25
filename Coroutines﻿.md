@@ -15,6 +15,15 @@ dependencies {
 }
 ```
 
+## Coroutines 기초
+coroutine에서는 thread를 block(점유)하는 대신 처리를 suspend(중단)한다. 
+* block   
+block은 스레드를 점유한다. 점유를 하게 되면 thread로 처리를 진행할 수 없게 된다.
+* suspend   
+suspend는 coroutine 처리를 중단하고 thread를 해제한다. 해제하는 동안 다른 처리에 리소스를 활용할 수 있다.
+
+
+
 
 ### 참고
 https://developer.android.com/kotlin/coroutines?hl=ko   
