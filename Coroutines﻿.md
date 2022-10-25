@@ -16,15 +16,32 @@ dependencies {
 ```
 
 ## Coroutines 기초
-coroutine에서는 thread를 block(점유)하는 대신 처리를 suspend(중단)한다. 
+Coroutine에서는 thread를 block(점유)하는 대신 처리를 suspend(중단)한다. 
 * block   
 block은 스레드를 점유한다. 점유를 하게 되면 thread로 처리를 진행할 수 없게 된다.
 * suspend   
 suspend는 coroutine 처리를 중단하고 thread를 해제한다. 해제하는 동안 다른 처리에 리소스를 활용할 수 있다.
 
+Coroutine에서 만들어진 thread을 직접 제어하지 않고 Dispatchers를 통해서 제어한다. Dispatchers에 coroutine을 보내기만 하면 Dispatchers는 thread에 coroutine을 분산 시킨다.
+* Dispatchers.Main   
+메인 스레드로서 화면 UI와 상호작용 작업 등을 하는 Dispatchers
+* Dispatchers.IO   
+네트워크, DB 등 백그라운드에서 필요한 작업을 하는 Dispatchers
+* Dispatchers.Default   
+CPU를 많이 사용하는 정렬이나 무거운 계산 작업 등을 하는 Dispatchers
 
-
-
+Dispatchers에 coroutine을 붙이는 메서드는 2가지가 있다.
+* lanuch   
+즉시 실행되고, 실행결과는 반환하지 않는다.   
+관리를 위한 Job객체를 반환한다.   
+join을 통해서 완료를 대기할 수 있다.
+* async   
+결과나 예외를 반환한다.   
+실행결과는 Deferred<T>를 통해서 반환하며 await을 통해서 받을 수 있다.   
+await은 작업이 완료될때까지 기다린다.
+    
 ### 참고
 https://developer.android.com/kotlin/coroutines?hl=ko   
 https://www.devkuma.com/docs/kotlin/coroutine/   
+https://todaycode.tistory.com/23    
+https://kotlinworld.tistory.com/155?category=973476
