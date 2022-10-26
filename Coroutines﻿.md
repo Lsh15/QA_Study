@@ -17,9 +17,9 @@ dependencies {
 
 ## Coroutines 기초
 Coroutine에서는 thread를 block(점유)하는 대신 처리를 suspend(중단)한다. 
-* block   
-block은 스레드를 점유한다. 점유를 하게 되면 thread로 처리를 진행할 수 없게 된다.
-* suspend   
+* block(점유)   
+block은 스레드를 점유한다. block(점유)을 하게 되면 thread로 처리를 진행할 수 없게 된다.
+* suspend(중단)   
 suspend는 coroutine 처리를 중단하고 thread를 해제한다. 해제하는 동안 다른 처리에 리소스를 활용할 수 있다.
 
 Coroutine에서 만들어진 thread을 직접 제어하지 않고 Dispatchers를 통해서 제어한다. Dispatchers에 coroutine을 보내기만 하면 Dispatchers는 thread에 coroutine을 분산 시킨다.
@@ -49,7 +49,7 @@ CoroutineScope 빌더를 사용하여 scope를 선언 할 수 있다. coroutine 
 모두 하위코드(스레드)를 실행시키고 하위코드(스레드)의 작업이 끝날 때 까지 기다린다.
 * runBlocking과 coroutineScope의 차이점   
 runBlocking은 일반 함수(regular function)이고, coroutineScope는 suspend 함수(suspend function)로 실행된다.   
-runBlocking은 기존에 실행되던 thread를 block 시키고, corutineScope는 기존에 실행되던 thread를 suspend 시킨다.
+runBlocking은 기존에 실행되던 thread를 block(점유) 시키고, corutineScope는 기존에 실행되던 thread를 suspend(중단) 시킨다.
     
 ### 참고
 https://developer.android.com/kotlin/coroutines?hl=ko   
