@@ -40,6 +40,17 @@ join을 통해서 완료를 대기할 수 있다.
 실행결과는 Deferred<T>를 통해서 반환하며 await을 통해서 받을 수 있다.   
 await은 작업이 완료될때까지 기다린다.
     
+## Structured concurrency (구조적 동시성)
+Coroutine는 Structured concurrency의 원칙을 따른다. 새로운 coroutine은 coroutine의 생명 주기를 구분하는 특정 coroutineScope에서만 시작할 수 있다. 
+    
+## Scope builder (스코프 빌더)
+CoroutineScope 빌더를 사용하여 scope를 선언 할 수 있다. coroutine scope를 작성하면 기동된 모든 처리가 완료할 때까지 완료하지 않는다.
+* runBlocking과 coroutineScope의 공통점   
+모두 하위코드(스레드)를 실행시키고 하위코드(스레드)의 작업이 끝날 때 까지 기다린다.
+* runBlocking과 coroutineScope의 차이점   
+runBlocking은 일반 함수(regular function)이고, coroutineScope는 suspend 함수(suspend function)로 실행된다.   
+runBlocking은 기존에 실행되던 thread를 block 시키고, corutineScope는 기존에 실행되던 thread를 suspend 시킨다.
+    
 ### 참고
 https://developer.android.com/kotlin/coroutines?hl=ko   
 https://www.devkuma.com/docs/kotlin/coroutine/   
