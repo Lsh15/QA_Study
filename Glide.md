@@ -19,12 +19,14 @@ Glide는 3개의 파라미터를 필수적으로 요구하며, 파라미터를 �
 * override(width, height)함수를 이용하여 이미지의 크기를 조절한다.
 
 ## 이미지 변형
-* CenterCrop
+* CenterCrop   
+이미지의 가로/세로의 길이 중 짧은 쪽을 ImageView의 레이아웃 크기에 맞춰서 출력한다. 원본 이미지 가로/세로의 비율은 유지되고 레이아웃에서 벗어난 이미지는 출력되지 않는다.
 
-* FitCenter
+* FitCenter   
+이미지의 가로/세로의 길이 중 긴 쪽을 ImageView의 레이아웃 크기에 맞춰서 출력한다. 원본 이미지 가로/세로의 비율은 유지되고 레이아웃에 이미지외 빈공간은 background 속성의 color로 채워진다.
 
-* CircleCrop
-
+* CircleCrop   
+FitCenter와 유사하게 동작하지만 이미지를 원으로 변경한다.
 
 ## placeholder
 
