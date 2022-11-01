@@ -5,9 +5,15 @@ Glide는 안드로이드의 부드러운 스크롤링에 초점을 맞춘 빠르
 implementation 'com.github.bumptech.glide:glide:4.14.2'
 ```
 ## 이미지 출력
+``` kotlin
+Glide.with(Context)
+     .load(이미지(URL, Resouce ID))
+     .into(imageView)
+```
+with()함수에 Context를 전달하고, load()함수에 이미지(URL 또는 Resouce ID)를 전달하고, into() 함수에 imageView 객체 전달하면 이미지를 가져와 출력한다.
 
 ## 크기 조절
-
+* override(width, height)함수를 이용하여 이미지의 크기를 조절할 수 있다.
 
 ## placeholder
 
