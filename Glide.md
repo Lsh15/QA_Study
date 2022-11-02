@@ -31,12 +31,30 @@ FitCenter와 유사하게 동작하지만 이미지를 원으로 변경한다.
 ## Placeholders
 Glide를 통해 서로 다른 상황에서 사용되는 세 가지 placeholder를 지정할 수 있다.
 * Placeholder   
-Placeholder는 이미지 요청이 진행되는 동안 표시되는 Drawable이다. 요청이 성공적으로 완료되면 placeholder가 요청된 리소스로 바뀐다. 요청된 리소스가 메모리에서 로드되면 placeholder가 표시되지 않을 수 있다
+``` kotlin
+Glide.with(Context)
+     .load(url)
+     .placeholder(R.drawable.placeholder)
+     .into(ImageView)
+```
+Placeholder는 이미지 요청이 진행되는 동안 표시되는 Drawable이다. 요청이 성공적으로 완료되면 placeholder가 요청된 리소스로 바뀐다. 요청된 리소스가 메모리에서 로드되면 placeholder가 표시되지 않을 수 있다.
 
 * Error   
+``` kotlin
+Glide.with(Context)
+     .load(url)
+     .error(R.drawable.error)
+     .into(ImageView)
+```
 요청이 영구적으로 실패하면 Error Drawable이 표시된다. 요청된 URL / 모델이 null이고 Fallback Drawable이 설정되지 않은 경우 Error Drwable도 표시된다.
 
 * Fallback   
+``` kotlin
+Glide.with(Context)
+     .load(url)
+     .fallback(R.drawable.fallback)
+     .into(ImageView)
+```
 Fallback Drawable은 요청된 URL 또는 모델이 null인 경우 표시된다. Fallback Drawables의 주요 목적은 사용자가 null이 예상되는지 여부를 표시 할 수 있도록 하는 것이다.
 
 ### 참고
