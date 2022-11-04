@@ -7,7 +7,7 @@ implementation 'com.google.android.material:material:<version>'
 ```
 ## AppBarLayout
 App Bar는 액티비티의 제목과 탐색(navigation)을 위한 액션 버튼 또는 여러 종류의 위젯으로 구성된 액티비티의 기본 도구모음(Toolbar)을 말한다.   
-![image](https://user-images.githubusercontent.com/50148363/199925229-9cc3ae01-d595-4a68-8757-a49292552e77.png)
+<img src = "https://user-images.githubusercontent.com/50148363/199925229-9cc3ae01-d595-4a68-8757-a49292552e77.png" width="900" height="300"/> 
 1. Container
 2. Navigation icon 
 3. Title 
@@ -15,8 +15,8 @@ App Bar는 액티비티의 제목과 탐색(navigation)을 위한 액션 버튼 
 5. Overflow menu 
 
 ## TabLayout
-TabLayout은 tab으로 구분하는 화면에서 tab 버튼을 배치하는 레이아웃이다.
-![image](https://user-images.githubusercontent.com/50148363/199925801-ee37cef4-f706-41a1-8721-463135364067.png)
+TabLayout은 Tab 버튼을 눌렀을 때 다른 페이지를 보여주는 레이아웃입니다. 상단에 Tab 버튼이 보이며, 이 버튼을 누르면 가운데 페이지가 변경됩니다.   
+<img src = "https://user-images.githubusercontent.com/50148363/199925801-ee37cef4-f706-41a1-8721-463135364067.png" width="700" height="300"/> 
 1. Container
 2. Active icon 
 3. Active text label 
@@ -26,8 +26,24 @@ TabLayout은 tab으로 구분하는 화면에서 tab 버튼을 배치하는 레�
 7. Tab item
 
 ## NavigationView
+NavigationView는 앱의 최상위 기본 탐색 메뉴로 동작하는 인터페이스 화면을 의미한다.
+<img src = "https://user-images.githubusercontent.com/50148363/199932833-27980100-0cd3-4474-92a7-e7969c8c2426.png" width="600" height="600"/>
+1. Container
+2. Header 
+3. Divider 
+4. Active text overlay
+5. Active text
+6. Inactive text
+7. Subtitle 
+8. Scrim 
 
-## Floating Action Button
+## ExtendedFloatingActionButton
+FloatingActionButton은 화면 레이어 최상단에 떠있는 버튼을 의미한다.   
+<img src = "https://user-images.githubusercontent.com/50148363/199936348-a8bc200d-5e4e-4316-8d94-76c0f17caab8.png" width="500" height="300"/>
+1. Container
+2. Icon
+3. Text label
+
 
 ### 참고
 https://velog.io/@changhee09/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-AppBarLayout   
