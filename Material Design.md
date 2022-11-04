@@ -13,10 +13,13 @@ App Bar는 액티비티의 제목과 탐색(navigation)을 위한 액션 버튼 
 3. Title 
 4. Action items 
 5. Overflow menu 
+
 ### CoordinatorLayout
+CoordinatorLayout은 FrameLayout에 기반을 둔 Layout이다. CoordinatorLayout은 스크롤 이벤트에 따라 상단의 앱바 혹은 이미지를 변화시켜줄때 사용한다.
 
 ### CollapsingToolbarLayout
-
+AppBarLayout의 안에 작성하는데 AppBarLayout에 포함된 ImageView, Toolbar등을 어떻게 축소할지 설정하는 곳이다.
+ 
 ## TabLayout
 TabLayout은 Tab 버튼을 눌렀을 때 다른 페이지를 보여주는 레이아웃입니다. 상단에 Tab 버튼이 보이며, 이 버튼을 누르면 가운데 페이지가 변경됩니다.   
 TabLayout과 ViewPager2를 이용하면, Tab 버튼을 눌렀을 때 다른 페이지가 보이는 기능을 쉽게 구현할 수 있다. ViewPager2는 Swipe하여 페이지를 넘기는 UI를 구현하는데 사용되는 클래스이다.      
@@ -47,7 +50,6 @@ FloatingActionButton은 화면 레이어 최상단에 떠있는 버튼을 의미
 1. Container
 2. Icon
 3. Text label
-
 
 ### 참고
 https://velog.io/@changhee09/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-AppBarLayout   
