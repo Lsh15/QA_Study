@@ -13,9 +13,13 @@ App Bar는 액티비티의 제목과 탐색(navigation)을 위한 액션 버튼 
 3. Title 
 4. Action items 
 5. Overflow menu 
+### CoordinatorLayout
+
+### CollapsingToolbarLayout
 
 ## TabLayout
 TabLayout은 Tab 버튼을 눌렀을 때 다른 페이지를 보여주는 레이아웃입니다. 상단에 Tab 버튼이 보이며, 이 버튼을 누르면 가운데 페이지가 변경됩니다.   
+TabLayout과 ViewPager2를 이용하면, Tab 버튼을 눌렀을 때 다른 페이지가 보이는 기능을 쉽게 구현할 수 있다. ViewPager2는 Swipe하여 페이지를 넘기는 UI를 구현하는데 사용되는 클래스이다.      
 <img src = "https://user-images.githubusercontent.com/50148363/199925801-ee37cef4-f706-41a1-8721-463135364067.png" width="700" height="300"/> 
 1. Container
 2. Active icon 
