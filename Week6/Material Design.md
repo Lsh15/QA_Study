@@ -3,7 +3,9 @@ Material Design 은 모바일과 데스크톱 그리고 그 밖에 다양한 장
 
 ## 라이브러리 등록
 ``` kotlin
-implementation 'com.google.android.material:material:<version>'
+dependencies {
+    implementation 'com.google.android.material:material:<version>'
+}
 ```
 ## AppBarLayout
 App Bar는 액티비티의 제목과 탐색(navigation)을 위한 액션 버튼 또는 여러 종류의 위젯으로 구성된 액티비티의 기본 도구모음(Toolbar)을 말한다.   
