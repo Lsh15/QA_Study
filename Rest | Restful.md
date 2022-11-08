@@ -14,6 +14,13 @@
 * Representation (표현)   
 클라이언트가 서버로 요청을 보냈을 때 서버가 응답으로 보내주는 자원의 상태를 Representation이라고 한다. REST에서 하나의 자원은 JSON , XML , TEXT , RSS 등 여러 형태의 Representation으로 나타낼 수 있다.
 
+## REST의 장단점
+* 장점
+
+
+* 단점
+
+
 ## Rest 특징
 * Server-Client (서버-클라이언트 구조)   
 자원이 있는 쪽이 Server, 자원을 요청하는 쪽이 Client가 되어 서로 간 의존성이 줄어든다.   
@@ -38,7 +45,27 @@ URI로 지정한 자원에 대한 조작을 통일되고 한정적인 인터페�
 동사(Method) + 명사(URI) 로 이루어져 있어 어떤 메서드에 무슨 행위를 하는지 알 수 있으며 REST API 자체가 매우 쉬워서 API 메시지 자체만 보고도 API를 이해할 수 있다.
 
 ## Rest API
-REST 기반으로 서비스 API를 구현한 것으로 최근 대부분의 OpenAPI(누구나 사용할 수 있도록 공개된 API)는 REST API이다
+REST 기반으로 서비스 API를 구현한 것으로 최근 대부분의 OpenAPI(누구나 사용할 수 있도록 공개된 API)는 REST API이다.
+
+## REST API의 설계 기본 규칙
+1. URI는 정보의 자원을 표현해야 한다.
+* Resource는 대문자보다는 소문자를, 동사보다는 명사를 사용해야 한다.
+2. 자원에 대한 행위는 HTTP Method로 나타내야 한다.
+* HTTP의 메소드
+  * GET : 조회, URI의 정보를 검색하여 조회(Read)
+  * POST : 생성, 요청된 Resource를 생성(Create)
+  * PUT : 전체 수정, 요청된 Resource를 수정(Update)
+  * PATCH : 부분 수정, 요청된 Resource를 일부 수정(Update)
+  * DELETE : 삭제, 요청된 Resource를 삭제할 것을 요청(Delete)
+
+## REST API의 설계 세부 규칙
+1.	슬래시 구분자( / )는 계층 관계를 나타내는데 사용한다.
+2.	URI 마지막 문자로 슬래시를 포함하지 않는다.
+3.	하이픈( - )은 가독성을 높이는데 사용한다.
+4.	밑줄( _ )은 URI에 포함하지 않는다.
+5.	URI 경로에는 소문자가 적합하다.
+6.	파일 확장자는 URI에 포함하지 않으며 Accept 헤더를 이용한다.
+7.	리소스 간 연관관계가 있는 경우에는 / 리소스 명 / 리소스 ID / 연관 있는 다른 리소스명 으로 표현한다.
 
 # Restful
 
