@@ -14,3 +14,16 @@ Room 라이브러리는 안드로이드 앱에서 SQLite 데이터베이스를 �
 
 ![image](https://user-images.githubusercontent.com/50148363/202990416-2dbd1236-b11f-408f-abb5-060879b38355.png)
 
+## Room Database
+
+
+## Data Access Object
+
+
+
+## Entity
+
+
+
+### 참고
+https://developer.android.com/training/data-storage/room?hl=ko   
