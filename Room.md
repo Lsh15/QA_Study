@@ -18,6 +18,39 @@ Room 라이브러리는 안드로이드 앱에서 SQLite 데이터베이스를 �
 Room Database는 데이터베이스를 생성하거나 버전을 관리하는 등 실제 데이터베이스 파일과 밀접한 작업을 담당한다. 또한, 어노테이션(@)을 통해 데이터베이스 파일을 사용할 데이터 접근 객체를 정의하여 데이터 접근 객체와 데이터베이스 파일을 연결하는 역할도 수행한다. 필요에 따라 여러 개의 Room Database를 정의할 수 있으므로, 각각 다른 데이터베이스 파일에 연결된 데이터 접근 객체들을 선언하는 것도 가능하다.   
 Room Database를 정의하는 클래스는 반드시 RoomDatabase를 상속한 추상 클래스여야 하며, 클래스의 멤버 함수 형태로 데이터베이스와 연결할 데이터 접근 객체를 선언한다. 또한, @Database 어노테이션을 사용하여 데이터베이스에서 사용할 엔티티와 데이터베이스의 버전을 지정한다.
 
+* Room Database 클래스를 정의한 예시
+``` kotlin
+// RoomDatabase를 상속하는 추상 클래스로 룸 데이터베이스 클래스를 선언한다.
+// @Database 어노테이션으로 룸 데이터베이스의 속성을 지정한다.
+// entities에 데이터베이스에서 사용할 엔티티의 클래스를 배열 형태로 넣어주며, 
+// version에 데이터베이스의 버전을 넣어준다.
+@Database(entities = [Memo::class], version = 1)
+abstract class AppDataBase: RoomDatabase() {
+    // 메모 정보에 접근하는 MemoDao 데이터 접근 객체를
+    // Room Database인 AppDataBase와 연결한다.
+    abstract fun memoDao(): MemoDao
+}
+```
+
+데이터를 실제로 다루는 역할을 하는 Data Access Object(데이터 접근 객체)를 얻으려면 Room Database의 인스턴스가 필요하다.   
+Room Database는 추상 클래스로 정의되므로, Room Database 구현체의 인스턴스를 얻으려면 Room.databaseBuilder() 함수를 사용해야 한다.
+
+* Room.databaseBuilder() 함수를 사용하여 AppDataBase의 인스턴스를 생성하는 예시
+``` kotlin
+// AppDataBase의 인스턴스를 생성한다.
+// 컨텍스트와 생성할 Room Database의 클래스, 그리고 생성될 데이터베이스 파일의 이름을 지정한다.
+appDataBaseInstance = Room.databaseBuilder(
+    appInstance.applicationContext,
+    AppDataBase::class.java, "exampleApp.db"
+)
+    .fallbackToDestructiveMigration() // DB version 달라졌을 경우 데이터베이스 초기화
+    .allowMainThreadQueries() // 메인 스레드에서 접근 허용
+    .build()
+```
+
+Room Database의 인스턴스를 한번 생성한 후에는 다른 곳에서도 계속 사용할 수 있도록 생성한 인스턴스를 계속 유지하는 것이 좋다. 그러므로 싱글톤 패턴 혹은 유사한 방법을 사용하여 앱 내에서 인스턴스를 공유하도록 구현하는 것이 좋다.
+> Room.inMemoryDatabaseBuilder()를 사용하면 파일 형태로 저장되는 데이터베이스 대신 메모리에 데이터베이스를 저장하는 Room Database 인스턴스를 생성할 수 있다. 여기에 저장되는 데이터베이스는 애플리케이션 프로세스가 종료되는 즉시 사라진다.
+
 ## Data Access Object
 Data Access Object(데이터 접근 객체)는 데이터베이스를 통해 수행할 작업을 정의한 클래스이다.   
 데이터 삽입, 수정, 삭제 작업이나 저장된 데이터를 불러오는 작업 등을 함수 형태로 정의하며, 앱의 비즈니스 로직에 맞는 형태로 작업을 정의할 수 있다.
