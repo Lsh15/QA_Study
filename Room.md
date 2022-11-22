@@ -45,7 +45,7 @@ appDataBaseInstance = Room.databaseBuilder(
 )
     .fallbackToDestructiveMigration() // DB version 달라졌을 경우 데이터베이스 초기화
     .allowMainThreadQueries() // 메인 스레드에서 접근 허용
-    .build()
+    .build()    
 ```
 
 Room Database의 인스턴스를 한번 생성한 후에는 다른 곳에서도 계속 사용할 수 있도록 생성한 인스턴스를 계속 유지하는 것이 좋다. 그러므로 싱글톤 패턴 혹은 유사한 방법을 사용하여 앱 내에서 인스턴스를 공유하도록 구현하는 것이 좋다.
@@ -54,7 +54,34 @@ Room Database의 인스턴스를 한번 생성한 후에는 다른 곳에서도 
 ## Data Access Object
 Data Access Object(데이터 접근 객체)는 데이터베이스를 통해 수행할 작업을 정의한 클래스이다.   
 데이터 삽입, 수정, 삭제 작업이나 저장된 데이터를 불러오는 작업 등을 함수 형태로 정의하며, 앱의 비즈니스 로직에 맞는 형태로 작업을 정의할 수 있다.
-Data Access Object는 인터페이스나 추상 클래스로 정의할 수 있으며, 반드시 @Dao 어노테이션을 붙여 주어야 한다.
+Data Access Object는 인터페이스나 추상 클래스로 정의할 수 있으며, 반드시 @Dao 어노테이션을 붙여 주어야 한다.   
+@Query 어노테이션을 사용하면 Data Access Object 내에 정의된 함수를 호출했을 때 수행할 SQL 쿼리문을 작성할 수 있다. @Query 어노테이션을 사용한 함수는 어노테이션에 작성된 SQL 쿼리문에 함수의 매개변수를 결합할 수 있다. 검색 결과를 반환하는 쿼리문은 @Query 어노테이션을 사용한 함수의 반환 타입에 맞게 결과가 변환되어 출력된다.   
+@Query 어노테이션 내에서 사용할 수 있는 SQL문은 INSERT, UPDATE, DELETE로 제한된다.
+
+* @Query 어노테이션을 사용하여 Data Access Object에 작업을 정의한 예시
+``` kotlin
+@Dao
+interface MemoDao {
+    // Memo 테이블의 모든 데이터를 반환한다.
+    @Query("SELECT * FROM Memo")
+    suspend fun getAllMemo(): List<Memo>
+
+    @Insert // Long을 return하면 해당 memo의 id를 알 수 있다.
+    suspend fun insertMemo(memo: Memo): Long
+
+    @Delete
+    suspend fun deleteMemo(memo: Memo)
+
+    // Memo 테이블의 id와 일치하는 id를 가진 데이터를 삭제한다.
+    @Query("DELETE FROM Memo Where id = :id")
+    suspend fun deleteMemoByID(id: Long)
+
+    // Memo 테이블에서 id 필드의 값이 'id'인 모든 레코드의 memo 값을 memo 변경한다.
+    @Query("UPDATE Memo SET memo = :memo WHERE id = :id")
+    suspend fun modifyMemo(id: Long, memo: String)
+}
+```
+
 
 ## Entity
 Entity(엔티티)는 데이터베이스에 저장할 데이터의 형식을 정의하며, Entity가 하나의 테이블을 구성한다. 이 때문에 룸 데이터베이스를 정의할 때 해당 데이터베이스에서 사용하는 Entity를 @Database 어노테이션 내에 반드시 지정해 주어야 한다. 룸 데이터베이스에서 지정하지 않은 Entity를 사용하면 컴파일 에러가 발생한다.   
