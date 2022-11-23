@@ -83,13 +83,20 @@ interface MemoDao {
 }
 ```
 
-
 ## Entity
 Entity(엔티티)는 데이터베이스에 저장할 데이터의 형식을 정의하며, Entity가 하나의 테이블을 구성한다. 이 때문에 룸 데이터베이스를 정의할 때 해당 데이터베이스에서 사용하는 Entity를 @Database 어노테이션 내에 반드시 지정해 주어야 한다. 룸 데이터베이스에서 지정하지 않은 Entity를 사용하면 컴파일 에러가 발생한다.   
 Entity는 @Entity 어노테이션을 사용하여 정의한다. 데이터베이스에 저장할 정보는 필드로 표현하며, public 수준의 가시성을 갖거나 Getter/Setter를 사용하여 필드에 접근할 수 있어야 한다. 코틀린은 필드와 Getter/Setter 대신 프로퍼티를 사용하여 데이터 베이스에 저장할 정보를 정의할 수 있다.   
 Entity는 최소한 하나의 주요키(Primary Key)를 지정해야 한다. @PrimaryKey 어노테이션을 사용하면 Entity에서 사용할 주요 키를 지정할 수 있다. 만약 여러 필드를 주요 키로 사용하고 싶다면 @Entity 어노테이션에서 주요 키로 사용할 필드의 이름을 지정할 수 있다. 클래스에 포함된 필드 중 데이터베이스에 저장하고 싶지 않은 필드가 있을 경우 @Ignore 어노테이션을 필드에 추가하면 된다.
 
+* Entity를 정의한 클래스의 예시
 
-
+``` kotlin
+@Entity
+class Memo (
+    @PrimaryKey(autoGenerate = true) var id: Long,
+    var memo: String,
+    var editMode: Boolean
+)
+```
 ### 참고
 https://developer.android.com/training/data-storage/room?hl=ko   
