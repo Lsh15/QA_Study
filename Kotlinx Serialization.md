@@ -31,8 +31,43 @@ plugins {
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
 }
-
 ```
+
+## 예시 
+``` kotlin
+@Serializable
+data class Person(
+    val name: String,
+    val age: Int = 20,
+    val hobby: String="game",
+)
+```
+직렬화를 적용할 클래스에 @Serializable 어노테이션을 추가해준다.
+``` kotlin
+fun main() {
+    val data = """
+        {
+            "name" : "kildong"
+        }
+    """
+
+    val result: Person = Json.decodeFromString(data)
+    println(result)
+}
+```
+json String을 객체로 가져와야하기 때문에 Json.decodeFromString() 함수를 사용하면 된다.
+
+실행 결과
+```
+Person(name=kildong, age=20, hobby=game)
+```
+JSON파일에 age, hobby필드가 없더라도 설정해둔 default value를 사용했기 때문에 정상적인 결과가 나왔다.
+
+
+
+
+
+
 ### 참고
 https://kotlinlang.org/docs/serialization.html   
 https://mashup-android.vercel.app/mashup-12th/jieun/kotlinx-serialization/   
