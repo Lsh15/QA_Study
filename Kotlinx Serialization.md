@@ -63,10 +63,15 @@ Person(name=kildong, age=20, hobby=game)
 ```
 JSON파일에 age, hobby필드가 없더라도 설정해둔 default value를 사용했기 때문에 정상적인 결과가 나왔다.
 
+## 직렬화(serialization)를 수행하는 함수
+* encodeToByteArray: ByteArray 형식으로 직렬화 수행 (코틀린 클래스 -> ByteArray)
 
+* encodeToString: String 형식으로 직렬화 수행 (코틀린 클래스 -> String)
 
+## 역 직렬화(deserialization)를 수행하는 함수
+* decodeFromByteArray: ByteArray 형식으로부터 역 직렬화 수행 (ByteArray -> 코틀린 클래스)
 
-
+* decodeFromString: String 형식으로부터 역 직렬화 수행 (String -> 코틀린 클래스)
 
 ### 참고
 https://kotlinlang.org/docs/serialization.html   
