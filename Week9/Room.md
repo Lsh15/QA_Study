@@ -103,5 +103,9 @@ class Memo (
 ```
 각 Entity별로 생성되는 테이블 이름과 테이블 내의 열(column) 이름이 Entity 클래스 및 필드 이름과 동일하다. @Entity 어노테이션 내에서 tableName 속성을 사용하면 생성되는 테이블 이름을 변경할 수 있고, @ColumnInfo 어노테이션의 name 속성을 사용하면 각 필드의 데이터를 저장할 열 이름을 지정할 수 있다.
 
+### 예시 프로젝트
+[RoomMemo Project](https://github.com/Lsh15/RoomMemo)
+
 ### 참고
 https://developer.android.com/training/data-storage/room?hl=ko   
+
