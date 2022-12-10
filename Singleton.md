@@ -14,6 +14,17 @@ Singleton(싱글톤) 인스턴스는 자원을 공유하고 있기 때문에 테
 Singleton(싱글톤) 인스턴스가 혼자 너무 많은 일을 하거나, 많은 데이터를 공유시키면 다른 클래스들 간의 결합도가 높아지게 되는데, 이때 개방-폐쇄 원칙이 위배된다.
 결합도가 높아지게 되면, 유지보수가 힘들고 테스트도 원활하게 진행할 수 없는 문제점이 발생한다.
 
+## object
+클래스 이름 앞에 object 키워드를 붙이면 Singleton(싱글톤) 클래스를 만들수 있다.   
+생성자를 호출하지 않는 클래스에서만 사용할 수 있다.
+``` kotlin
+object ExSingletonClass{ }
+val exSingleton = ExSingletonClass
+```
+
+## companion object
+생성자를 통해 파라메터를 전달받는 Singleton(싱글톤) 클래스를 만들기 위해선 companion object 를 사용한다.
+
 
 
 ### 참고
