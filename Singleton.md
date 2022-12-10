@@ -24,7 +24,25 @@ val exSingleton = ExSingletonClass
 
 ## companion object
 생성자를 통해 파라메터를 전달받는 Singleton(싱글톤) 클래스를 만들기 위해선 companion object 를 사용한다.
+``` kotlin
+class ExSingletonClass private constructor(context: Context) {
 
+    companion object {
+    
+    //자기 자신 변수 가져오기
+        @Volatile
+        private var instance: ExSingletonClass? = null
+    
+    //자기 자신 가져오기
+        fun getInstance(context: Context): ExSingletonClass =
+            instance ?: synchronized(this) {
+                instance ?: ExSingletonClass(context).also {
+                    instance = it
+                }
+            }
+        }
+    }
+```
 
 
 ### 참고
