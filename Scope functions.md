@@ -92,4 +92,6 @@ There are 3 elements that end with e.
 ```
 
 ### 참고
-https://kotlinlang.org/docs/scope-functions.html
+https://kotlinlang.org/docs/scope-functions.html   
+https://codechacha.com/ko/kotlin-standard-library-functions/   
+https://www.devkuma.com/docs/kotlin/scope-functions/
