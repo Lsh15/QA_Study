@@ -22,10 +22,29 @@ fun main() {
 HELLO
 ```
 ## with
+* 기본 정의
+```
+inline fun <T, R> with(receiver: T, block: T.() -> R): R
+```
+with은 this로 리시버에 접근하고, 람다함수의 마지막 결과를 리턴한다.
+
+let은 리시버 객체의 확장함수(extension function)로 쓰이지만, with는 그렇지 않다.
+
+with는 리턴값을 사용하지 않는 경우에 쓸 것을 권장하고 있다. 이렇게 사용하면 코드가 간결해지고 가독성이 높아질 수 있습니다.
 
 ### 예시
 ``` kotlin
+fun main() {
+    val numbers = mutableListOf("one", "two", "three")
+    val firstAndLast = with(numbers) {
+        "The first element is ${first()}," +
+        " the last element is ${last()}"
+    }
+    println(firstAndLast)
+}
 
+// 실행결과
+The first element is one, the last element is three
 ```
 
 
@@ -34,7 +53,7 @@ HELLO
 ```
 inline fun <T, R> T.run(block: T.() -> R): R
 ```
-run은 this로 리시버에 접근하고, let과 with의 합체 버전으로 객체에 포함된 함수를 실행하고, 함수의 마지막 결과를 반환할 때 사용한다.
+run은 this로 리시버에 접근하고, let과 with의 합체 버전으로 객체에 포함된 함수를 실행하고, 함수의 마지막 결과를 리턴한다.
 
 run은 람다함수에서 여러 값을 초기화하고 리턴 값을 어떤 객체의 초기값으로 사용할 때 쓰면 좋다.
 
