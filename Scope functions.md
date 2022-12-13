@@ -80,11 +80,24 @@ There are 3 elements that end with e.
 ```
 inline fun <T> T.apply(block: T.() -> Unit): T
 ```
+apply는 this로 리시버에 접근하고, 리시버 객체를 리턴한다.
 
+apply는 객체의 property 값을 적용할 때 많이 사용된다. 어떤 객체를 선언할 때 생성자만으로 값을 세팅할 수 없다면 apply를 통해서 값을 따로 붙여서 연속적으로 값을 세팅할 수 있다. 
 
 ### 예시
 ``` kotlin
+data class Person(var name: String, var age: Int = 0, var city: String = "")
 
+fun main() {
+    val adam = Person("Adam").apply {
+        age = 32
+        city = "London"        
+    }
+    println(adam)
+}
+
+// 실행결과
+Person(name=Adam, age=32, city=London)
 ```
 
 ## also
