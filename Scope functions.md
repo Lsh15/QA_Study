@@ -75,8 +75,11 @@ numbers: [one, two, three, four, five]
 There are 3 elements that end with e.
 ```
 
-
 ## apply
+* 기본 정의
+```
+inline fun <T> T.apply(block: T.() -> Unit): T
+```
 
 
 ### 예시
@@ -85,6 +88,10 @@ There are 3 elements that end with e.
 ```
 
 ## also
+* 기본 정의
+```
+inline fun <T> T.also(block: (T) -> Unit): T
+```
 
 ### 예시
 ``` kotlin
