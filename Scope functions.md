@@ -1,5 +1,11 @@
 # Scope functions
-
+기본 정의 이해를 위한 제네릭 약어의 의미
+* E : Element
+* K : Key
+* N : Number
+* T : Type
+* V : Value
+* R : Return Type
 ## let
 * 기본 정의
 ``` 
