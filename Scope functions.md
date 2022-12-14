@@ -130,6 +130,16 @@ The list elements before adding new one: [one, two, three]
 [one, two, three, four]
 ```
 
+## 요약
+Function(함수) | Object reference(참조 객체) | Return value(결과 값) | Is extension function(확장 함수 여부)
+:---:|:---:|:---:|:---:|
+let | it | Lambda result | Yes 
+run | this | Lambda result | Yes
+with | this | Lambda result | No
+apply | this | Context object | Yes
+also | it | Context object | Yes 
+
+
 ### 참고
 https://kotlinlang.org/docs/scope-functions.html   
 https://codechacha.com/ko/kotlin-standard-library-functions/   
