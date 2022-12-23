@@ -48,7 +48,7 @@ class AuthenticationService(){
 Open-Closed Principle (개방-폐쇄 원칙) 이란 소프트웨어의 구성요소(컴포넌트, 클래스, 모듈, 함수)는 확장에 열려있고, 변경에 닫혀있어야 한다는 원칙이다.
 
 ### 예시 
-스마트폰 그리고 스마트폰 서비스 정보를 담고 있는 MobilePhoneUser 클래스가 있고, 스마트폰 서비스에는 HMS, GMS 라고 불리는 2개의 다른 서비스가 있다고 가정
+스마트폰 그리고 스마트폰 서비스 정보를 담고 있는 MobilePhoneUser 클래스가 있고, 스마트폰 서비스에는 HMS, GMS 라고 불리는 2개의 다른 클래스가 있다고 가정
 * Wrong Ex
 ``` kotlin
 class MobilePhone {
@@ -70,7 +70,7 @@ class HuaweiMobileServices {
 }
 ```
 
-새로운 스마트폰 서비스 타입이 나오면,  잊고 추가하지 않을 수도 있고, 코드량도 정량적으로 늘게 되어 그 때마다 하나하나 if-else 문을 통해 추가해야하는 문제 발생된다.
+새로운 스마트폰 서비스 타입이 나오면,  잊고 추가하지 않을 수도 있고, 코드량도 정량적으로 늘게 되어 그 때마다 if-else 문을 통해 추가해야하는 문제 발생된다.
 모든 스마트폰 서비스를 위한 하나의 인터페이스를 가지게하고, 각각의 스마트폰 서비스 타입은 인터페이스를 구현하고, 고유한 특성을 가지고 있게 만들어 문제를 해결한다.
 * Right Ex
 ``` kotlin
@@ -107,7 +107,7 @@ class GoogleMobileServices: IMobileServices {
 Liskov Substitution Priciple (리스코프의 치환 원칙) 이란 자식 클래스는 언제나 부모클래스를 대체할 수 있어야 한다는 원칙이다.
 
 ### 예시 
-Vehicle 추상 클래스가 있고,  Vehicle 클래스는 엔진 상태에 대한 정보와 앞으로 이동 메서드를 가지고 있다는 가정
+Vehicle 추상 클래스가 있고, Vehicle 클래스는 엔진 상태에 대한 정보와 앞으로 이동 메서드를 가지고 있다는 가정
 * Wrong Ex
 ``` kotlin
 abstract class Vehicle {
@@ -254,8 +254,8 @@ class Bird: Animal, FlyingAnimal {
 Dependency Inversion Principle (의존성 역전 원칙) 이란 상위와 하위 객체 모두가 동일한 추상화에 의존해야 한다는 원칙이다.
 
 ### 예시 
-* Wrong Ex
 Android 개발자와 iOS 개발자가 Android, iOS 를 위한 앱을 만들고, 클래스들은 각각의 운영체제가 소유한 프로그래밍 언어를 사용하여 앱을 만들 때 필요한 메서드들을 가지고 있다고 가정
+* Wrong Ex
 ``` kotlin
 class AndroidDeveloper {
     fun developMobileApp(){
