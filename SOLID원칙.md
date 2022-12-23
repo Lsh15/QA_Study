@@ -5,6 +5,42 @@ SOLID란 2000년대 초반 로버트 마틴이 객체 지향 프로그래밍 및
 ## Single Responsibility Principle (단일 책임 원칙)
 Single Responsibility Principle (단일 책임 원칙) 이란 모든 클래스는 하나의 책임만 가지며, 클래스가 제공하는 모든 서비스는 하나의 책임을 수행하는데 집중한다는 원칙이다.
 
+### 예시 
+* Wrong Ex
+``` kotlin
+data class User(
+    var id: Long,
+    var name: String,
+    var password: String
+){
+    fun signIn(){
+        // Authetication 을 통한 로그인...
+    }
+
+    fun signOut(){
+        // Authetication 을 통한 로그아웃...
+    }
+}
+```
+
+* Right Ex
+``` kotlin
+data class User(
+    var id: Long,
+    var name: String,
+    var password: String
+)
+
+class AuthenticationService(){
+    fun signIn(){
+        // 로그인 관련 구현...
+    }
+
+    fun signOut(){
+        // 로그아웃 관련 구현...
+    }
+}
+```
 
 ## Open-Closed Principle (개방-폐쇄 원칙)
 Open-Closed Principle (개방-폐쇄 원칙) 이란 소프트웨어의 구성요소(컴포넌트, 클래스, 모듈, 함수)는 확장에 열려있고, 변경에 닫혀있어야 한다는 원칙이다.
@@ -16,6 +52,7 @@ Liskov Substitution Priciple (리스코프의 치환 원칙) 이란 자식 클�
 Interface Segregation Principle (인터페이스 분리 원칙) 이란 클래스가 다른 클래스에 종속될때에는 가능한 최소한의 인터페이스만을 사용해야 한다는 원칙이다.
 
 ## Dependency Inversion Principle (의존성 역전 원칙)
+Dependency Inversion Principle (의존성 역전 원칙) 이란 상위와 하위 객체 모두가 동일한 추상화에 의존해야 한다는 원칙이다.
 
 
 ### 참고
