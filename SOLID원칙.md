@@ -253,41 +253,63 @@ class Bird: Animal, FlyingAnimal {
 ## Dependency Inversion Principle (의존성 역전 원칙)
 Dependency Inversion Principle (의존성 역전 원칙) 이란 상위와 하위 객체 모두가 동일한 추상화에 의존해야 한다는 원칙이다.
 
-
 ### 예시 
 * Wrong Ex
+Android 개발자와 iOS 개발자가 Android, iOS 를 위한 앱을 만들고, 클래스들은 각각의 운영체제가 소유한 프로그래밍 언어를 사용하여 앱을 만들 때 필요한 메서드들을 가지고 있다고 가정
 ``` kotlin
-data class User(
-    var id: Long,
-    var name: String,
-    var password: String
-){
-    fun signIn(){
-        // Authetication 을 통한 로그인...
-    }
-
-    fun signOut(){
-        // Authetication 을 통한 로그아웃...
+class AndroidDeveloper {
+    fun developMobileApp(){
+        println("Developing Android Application by using Kotlin")
     }
 }
-```
 
+class IOSDeveloper {
+    fun developMobileApp(){
+        println("Developing iOS Application by using Swift")
+    }
+}
+
+fun main(){
+    val androidDeveloper = AndroidDeveloper()
+    val iOSDeveloper = IOSDeveloper()
+
+    androidDeveloper.developMobileApp()
+    iOSDeveloper.developMobileApp()
+}
+```
+Android 했던 것을 iOS 에서도 다시 하는 경우가 생길 것이고, 해결하기 위한 추상화를 진행하다보면 의존성을 가지는 클래스들이 생길 것이고 외부에서 받아 해결하는 방식으로 진행해야한다.
+MobileDeveloper 라는 인터페이스를 생성하고, 클래스를 구현하는 AndroidDeveloper, IOSDeveloper 클래스를 생성하여 해결한다.
 * Right Ex
 ``` kotlin
-data class User(
-    var id: Long,
-    var name: String,
-    var password: String
-)
+interface MobileDeveloper {
+    fun developMobileApp()
+}
 
-class AuthenticationService(){
-    fun signIn(){
-        // 로그인 관련 구현...
+class AndroidDeveloper(var mobileService: MobileServices): MobileDeveloper {
+    override fun developMobileApp(){
+        println("Developing Android Application by using Kotlin. " +
+                "Application will work with ${mobileService.serviceName}")
     }
+    enum class MobileServices(var serviceName: String) {
+        HMS("Huawei Mobile Services"),
+        GMS("Google Mobile Services"),
+        BOTH("Huawei Mobile Services and Google Mobile Services")
+    }
+}
 
-    fun signOut(){
-        // 로그아웃 관련 구현...
+class IosDeveloper: MobileDeveloper {
+    override fun developMobileApp() {
+        println("Developing iOS Application by using Swift")
     }
+}
+
+fun main(){
+    val developers = arrayListOf(
+    	AndroidDeveloper(AndroidDeveloper.MobileServices.HMS),
+        IosDeveloper(),
+        AndroidDeveloper(AndroidDeveloper.MobileServices.GMS)
+    )
+    developers.forEach(MobileDeveloper::developMobileApp)
 }
 ```
 
