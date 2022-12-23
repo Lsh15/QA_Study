@@ -68,7 +68,6 @@ class HuaweiMobileServices {
     	println("Huawei Mobile Services") 
     }
 }
-
 ```
 
 새로운 스마트폰 서비스 타입이 나오면,  잊고 추가하지 않을 수도 있고, 코드량도 정량적으로 늘게 되어 그 때마다 하나하나 if-else 문을 통해 추가해야하는 문제 발생된다.
@@ -101,85 +100,153 @@ class GoogleMobileServices: IMobileServices {
     	mobilePhone.brandName = "Google"
     	println("Google Mobile Services") 
     }
-}```
+}
+```
 
 ## Liskov Substitution Priciple (리스코프의 치환 원칙)
 Liskov Substitution Priciple (리스코프의 치환 원칙) 이란 자식 클래스는 언제나 부모클래스를 대체할 수 있어야 한다는 원칙이다.
 
-
 ### 예시 
+Vehicle 추상 클래스가 있고,  Vehicle 클래스는 엔진 상태에 대한 정보와 앞으로 이동 메서드를 가지고 있다는 가정
 * Wrong Ex
 ``` kotlin
-data class User(
-    var id: Long,
-    var name: String,
-    var password: String
-){
-    fun signIn(){
-        // Authetication 을 통한 로그인...
+abstract class Vehicle {
+    protected var isEngineWorking = false
+    abstract fun startEngine()
+    abstract fun moveForward()
     }
 
-    fun signOut(){
-        // Authetication 을 통한 로그아웃...
+class Car: Vehicle() {
+    override fun startEngine() {
+        println("Engine started")
+        isEngineWorking = true
+    }
+
+    override fun moveForward() {
+        println("Moving forward")
+    }
+}
+
+class Bicycle: Vehicle() {
+    override fun startEngine() {
+        // 필요없는 메서드
+    }
+    
+    override fun moveForward() {
+        println("Moving forward")
     }
 }
 ```
-
+Bicycle 클래스를 자식 클래스로 만들 때, Bicycle 은 엔진이 없기 때문에(성급한 추상화의 결과), startEngine 메서드는 필요 없어진다.
+Vehicle 을 상속받는 새로운 자식 클래스를 만들어 해결할 수 있다.
 * Right Ex
 ``` kotlin
-data class User(
-    var id: Long,
-    var name: String,
-    var password: String
-)
+interface Vehicle {
+    fun moveForward()
+}
 
-class AuthenticationService(){
-    fun signIn(){
-        // 로그인 관련 구현...
+abstract class VehicleWithEngine: Vehicle {    
+    private var isEngineWorking = false
+    
+    open fun startEngine() { 
+    	isEngineWorking = true 
+    }
+}
+
+class Car: VehicleWithEngine() {
+    override fun startEngine() {
+        super.startEngine()
+        println("Engine started")
     }
 
-    fun signOut(){
-        // 로그아웃 관련 구현...
+    override fun moveForward() {
+        println("Moving forward")
+    }
+}
+
+class Bicycle: Vehicle {
+
+    override fun moveForward() {
+        println("Moving forward")
     }
 }
 ```
+
 ## Interface Segregation Principle (인터페이스 분리 원칙)
 Interface Segregation Principle (인터페이스 분리 원칙) 이란 클래스가 다른 클래스에 종속될때에는 가능한 최소한의 인터페이스만을 사용해야 한다는 원칙이다.
 
-
 ### 예시 
+Animal 인터페이스를 구현했고, 인터페이스는 동물이 할 수 있는 행동들에 대한 메서드를 가지고 있다는 가정
 * Wrong Ex
 ``` kotlin
-data class User(
-    var id: Long,
-    var name: String,
-    var password: String
-){
-    fun signIn(){
-        // Authetication 을 통한 로그인...
+interface Animal {
+    fun eat()
+    fun sleep()
+    fun fly() // 의미 없는 예시용
+}
+
+class Cat: Animal {
+    override fun eat() {
+        println("Cat is eating fish")
     }
 
-    fun signOut(){
-        // Authetication 을 통한 로그아웃...
+    override fun sleep() {
+        println("Cat is sleeping on its owner's bed")
+    }
+
+    override fun fly() {
+        TODO("Not yet implemented") // Cats can't fly
+    }
+}
+
+class Bird: Animal {
+    override fun eat() {
+        println("Bird is eating forage")
+    }
+
+    override fun sleep() {
+        println("Bird is sleeping in the nest")
+    }
+
+    override fun fly() {
+        println("Bird is flying so high")
     }
 }
 ```
-
+Cat 같은 클래스가 추가된다면, Fly 메서드는 불필요하게 된다.
+Animal 클래스에서 fly 메서드를 제거하고, FlyingAnimal 같이 새로운 인터페이스를 추가하여 해결한다.
 * Right Ex
 ``` kotlin
-data class User(
-    var id: Long,
-    var name: String,
-    var password: String
-)
+interface Animal {
+    fun eat()
+    fun sleep()
+}
 
-class AuthenticationService(){
-    fun signIn(){
-        // 로그인 관련 구현...
+interface FlyingAnimal {
+    fun fly()
+}
+
+class Cat: Animal {
+    override fun eat() {
+        println("Cat is eating fish")
     }
 
-    fun signOut(){
-        // 로그아웃 관련 구현...
+    override fun sleep() {
+        println("Cat is sleeping on its owner's bed")
+    }
+}
+
+class Bird: Animal, FlyingAnimal {
+    override fun eat() {
+        println("Bird is eating forage")
+    }
+
+    override fun sleep() {
+        println("Bird is sleeping in the nest")
+    }
+
+    override fun fly() {
+        println("Bird is flying so high")
     }
 }
 ```
