@@ -1,4 +1,8 @@
 # StrongReference | WeakReference
+Reference는 메모리 누수를 막기 위해서 사용    
+Reference의 종류는 StrongReference,SoftReference, WeakReference가 있다.   
+StrongReference를 제외하고 Reference<T>를 상속받고 있다. Reference는 GC(Garbage Collection)와 연관이 있다.   
+
 ## StrongReference (강한 참조)
 객체를 생성하게 되면 생기게 되는 참조   
 StrongReference (강한 참조)를 통해 참조되고 있는 객체는 GC(Garbage Collection)의 대상에서 제외된다.   
