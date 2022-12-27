@@ -4,13 +4,14 @@ Reference의 종류는 StrongReference,SoftReference, WeakReference가 있다.
 StrongReference를 제외하고 Reference<T>를 상속받고 있다. Reference는 GC(Garbage Collection)와 연관이 있다.   
 
 ## StrongReference (강한 참조)
-객체를 생성하게 되면 생기게 되는 참조   
+StrongReference (강한 참조)는 객체를 생성하게 되면 생기게 되는 참조   
 StrongReference (강한 참조)를 통해 참조되고 있는 객체는 GC(Garbage Collection)의 대상에서 제외된다.   
 GC(Garbage Collection)가 발생해도 객체가 해제되지 않기 때문에 OOM(Out of memory)이 발생할 수 있다.
  
-## WeakReference
-
-
+## WeakReference (약한 참조)
+WeakReference (약한 참조)는 짧은 주기에 자주 사용되는 객체를 캐시 할 때 유용한 참조      
+WeakReference (약한 참조)는 GC(Garbage Collection)가 발생하면 무조건 수거되며 WeakReference (약한 참조)가 사라지는 시점이 GC(Garbage Collection)의 실행 주기와 일치한다.
+ 
 ## Soft Reference
 
 
