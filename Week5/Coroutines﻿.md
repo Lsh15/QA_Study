@@ -50,6 +50,9 @@ CoroutineScope 빌더를 사용하여 scope를 선언 할 수 있다. coroutine 
 * runBlocking과 coroutineScope의 차이점   
 runBlocking은 일반 함수(regular function)이고, coroutineScope는 suspend 함수(suspend function)로 실행된다.   
 runBlocking은 기존에 실행되던 thread를 block(점유) 시키고, corutineScope는 기존에 실행되던 thread를 suspend(중단) 시킨다.
+ 
+### 예시 프로젝트
+[LottoCoroutine](https://github.com/Lsh15/Lotto_Coroutine)
     
 ### 참고
 https://developer.android.com/kotlin/coroutines?hl=ko   
