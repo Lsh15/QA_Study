@@ -23,6 +23,18 @@
 
 ### [Room](https://github.com/Lsh15/Android-Study/blob/main/Week9/Room.md)
 
+### [SharedPreferences](https://github.com/Lsh15/Android-Study/blob/main/Week10/SharedPreferences.md)
+
+### [Kotlinx Serialization](https://github.com/Lsh15/Android-Study/blob/main/Week11/Kotlinx%20Serialization.md)
+
+### [Singleton](https://github.com/Lsh15/Android-Study/blob/main/Week11/Singleton.md)
+
+### [Scope functions](https://github.com/Lsh15/Android-Study/blob/main/Week12/Scope%20functions.md)
+
+### [SOLID 원칙](https://github.com/Lsh15/Android-Study/blob/main/Week13/SOLID%EC%9B%90%EC%B9%99.md)
+
+
+
 
 
 
