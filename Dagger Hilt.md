@@ -1,6 +1,12 @@
 # Dagger Hilt
 Hilt는 Dagger2 기반의 안드로이드 전용 의존성 주입 라이브러리이다.
 
+## 특징
+* 성능이 입증된 Dagger 기반으로 빌드 된다.
+* ViewModel, Fragment, WorkManager 등과 같이 Jetpack에 통합된다.
+* Android를 위해 정의된 Scope들이 있다.
+* 안드로이드 스튜디오와 통합되기 때문에 오브젝트 그래프를 가시화할 수 있다.
+
 ## Gradle 설정
 project-level의 build.gradle에 추가한다
 ``` kotlin
