@@ -41,11 +41,11 @@ Application 클래스 컴포넌트 코드를 생성 및 인스턴스화 하는 �
 Hilt는 Activity, Fragment, Service, View, BroadcastReceiver, ViewModel 컴포넌트들에 의존성 주입을 도와준다.     
 
 ### @InstallIn
-Hilt가 생성하는 DI 컨테이너에 어떤 module을 사용할지 가르킨다.
+Hilt가 생성하는 DI 컨테이너에 어떤 module을 사용할지 가르킨다.    
 Hilt에서 제공하는 기본적인 규칙은 모든 module에 @InstallIn 어노테이션을 사용하여 어떤 component에 install 할지 반드시 정해주어야 한다.
 
 ### @EntryPoint
-Hilt가 지원하지 않는 클래스(Content Provider,DFM)에서 의존성이 필요한 경우 사용한다.
+Hilt가 지원하지 않는 클래스(Content Provider,DFM)에서 의존성이 필요한 경우 사용한다.   
 Interface 에서만 사용가능 하고,@InstallIn이 반드시 함께 있어야한다.
 
 
