@@ -26,9 +26,14 @@ dependencies {
   kapt 'com.google.dagger:hilt-compiler:2.44.2'
 }  
 ```
-
+## 주요 Hilt Annotation
+* @HiltAndroidApp
+* @AndroidEntryPoint
+* @InstallIn
+* @EntryPoint
 
 ### 참고
 https://hyperconnect.github.io/2020/07/28/android-dagger-hilt.html      
 https://developer.android.com/training/dependency-injection/hilt-android     
 https://www.charlezz.com/?p=44230    
+https://www.youtube.com/watch?v=gkUCs6YWzEY
