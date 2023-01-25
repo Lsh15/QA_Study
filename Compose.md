@@ -18,8 +18,22 @@ Compose는 기존의 모든 코드와 호환되고 Navigation, ViewModel, Kotlin
 Material 디자인으로 빌드하든 자체 디자인 시스템으로 빌드하든, Compose를 사용하면 원하는 디자인을 유연하게 구현할 수 있다.
 Compose를 사용하면 애니메이션을 통해 쉽고 빠르게 앱에 움직임과 생명을 불어넣을 수 있다. 
 
-## @Composable Surface @Preview Modifiers Row Column Box
+## @Composable
+Compose는 데이터를 UI 계층 구조로 변환하는 일련의 함수를 호출하여 UI를 구성하게 되는데, 이때 호출되는 함수는 @Composable이라는 애노테이션을 사용하여 선언하게 된다.    
+@Composable을 사용하여 선언하는 함수를 Composable 함수라고 한다. Compose는 선언한 Composable 함수를 통해 시간이 지남에 따라 UI를 갱신하고 유지 관리할 수 있도록 한다.    
+또한 @Composable 위에 @Preview(showBackground = true) 이라는 어노테이션을 추가하면 코드로 작성한 UI의 미리보기도 가능하다.
+
+## Surface, Modifiers 
+Surface 는 요소를 감싸는 컨테이너와 같은 역할을 하는 요소이다.      
+Surface 를 사용해 텍스트의 컨테이너를 생성하고, 컨테이너에 색상을 부여하여 UI를 변동할 수 있다.
+
+Modifier 파라미터를 사용하면 Surface, Text 와 같은 Compose UI 요소와 레이아웃, 색상 등의 스타일을 수정할 수 있게 해준다.    
+Modifier는 스타일뿐만 아니라 클릭, 스크롤 여부 등의 동작을 제어하는 데에도 사용할 수 있다.
+
+Row Column Box
 
 
 ### 참고
 https://developer.android.com/jetpack/compose/documentation      
+https://www.charlezz.com/?p=45448    
+
