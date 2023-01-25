@@ -45,8 +45,8 @@ Column은 4가지 변수를 받는다.
 * content - Layout 안에 들어갈 위젯을 설정하는 변수
 
 ### Row
-Row은 수평으로 배치되는 레이아웃이다.   
-Column은 4가지 변수를 받는다.   
+Row는 수평으로 배치되는 레이아웃이다.   
+Row는 4가지 변수를 받는다.   
 * modifier - composable의 크기, 동작, 모양을 변경하거나 사용자의 입력을 처리(클릭, 스크롤 등) 할 수 있도록 만드는 변수
 
 * horizontalArrangement - 수평 배치(Arrangment)를 설정하는 변수
@@ -54,12 +54,16 @@ Column은 4가지 변수를 받는다.
 * content - Layout 안에 들어갈 위젯을 설정하는 변수
 
 ### Box
-Box는 여러 위젯을 곂쳐서 놓을 수 있는 레이아웃이다.
-
-
+Box는 여러 위젯을 곂쳐서 놓을 수 있는 레이아웃이다.   
+Frame Layout과 동작이 동일하고, 화면에 버튼을 만드는 경우에 유용하다.
+Box는 4가지 변수를 받는다.    
+* modifier - composable의 크기, 동작, 모양을 변경하거나 사용자의 입력을 처리(클릭, 스크롤 등) 할 수 있도록 만드는 변수
+* contentAlignment - 자식의 기본 정렬 방식을 결정하는 변수 
+* propagateMinConstraints - 최소 제약 조건을 전파시키는지 여부를 정하는 변수
+* content - Box 안에 들어갈 위젯을 설정하는 변수
 
 
 ### 참고
 https://developer.android.com/jetpack/compose/documentation      
 https://www.charlezz.com/?p=45448    
-
+https://kotlinworld.com/183?category=973270
