@@ -30,7 +30,33 @@ Surface 를 사용해 텍스트의 컨테이너를 생성하고, 컨테이너에
 Modifier 파라미터를 사용하면 Surface, Text 와 같은 Compose UI 요소와 레이아웃, 색상 등의 스타일을 수정할 수 있게 해준다.    
 Modifier는 스타일뿐만 아니라 클릭, 스크롤 여부 등의 동작을 제어하는 데에도 사용할 수 있다.
 
-Row Column Box
+## Column Row Box
+Compose에 표준 레이아웃 3요소는 Column, Row, Box 이다.
+
+![image](https://user-images.githubusercontent.com/50148363/214518807-e2dad830-d57d-4325-bee8-813df63d2db2.png)
+
+### Column
+Column은 수직으로 배치되는 레이아웃이다.   
+Column은 4가지 변수를 받는다.   
+* modifier - composable의 크기, 동작, 모양을 변경하거나 사용자의 입력을 처리(클릭, 스크롤 등) 할 수 있도록 만드는 변수
+
+* verticalArrangement - 수직 배치(Arrangment)를 설정하는 변수
+* horizontalAlignment - 수평 정렬(Alignment)을 설정하는 변수
+* content - Layout 안에 들어갈 위젯을 설정하는 변수
+
+### Row
+Row은 수평으로 배치되는 레이아웃이다.   
+Column은 4가지 변수를 받는다.   
+* modifier - composable의 크기, 동작, 모양을 변경하거나 사용자의 입력을 처리(클릭, 스크롤 등) 할 수 있도록 만드는 변수
+
+* horizontalArrangement - 수평 배치(Arrangment)를 설정하는 변수
+* verticalAlignment - 수직 정렬(Alignment)을 설정하는 변수
+* content - Layout 안에 들어갈 위젯을 설정하는 변수
+
+### Box
+Box는 여러 위젯을 곂쳐서 놓을 수 있는 레이아웃이다.
+
+
 
 
 ### 참고
