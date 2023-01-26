@@ -62,6 +62,13 @@ Box는 4가지 변수를 받는다.
 * propagateMinConstraints - 최소 제약 조건을 전파시키는지 여부를 정하는 변수
 * content - Box 안에 들어갈 위젯을 설정하는 변수
 
+### BoxWithConstraints
+BoxWithConstraints는 Box의 기능을 모두 포함하면서 ConstraintLayout에 접근할수 있는 레이아웃이다.   
+BoxWithConstraints을 사용하면 다양한 화면 크기에 맞는 레이아웃을 작성하는 경우 유용하다.   
+BoxWithConstraints는 5가지 변수를 받는다.    
+* constraints - pixel 단위를 수정하는 변수
+* minWidth, maxWidth, minHeight, maxHeight - dp 단위를 수정하는 변수
+
 
 ### 참고
 https://developer.android.com/jetpack/compose/documentation      
