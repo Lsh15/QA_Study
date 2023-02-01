@@ -3,6 +3,8 @@ TextField에는 Filled text field 와 Outlined text field 두 종류가 있다.
 동일한 구성요소, 기능을 제공하므로 선호하는 스타일에 맞춰 선택하면된다.
  
 ## TextField 구성요소
+Compose TextField의 구성요소는 18가지가 있다.
+
 ``` kotlin
 @Composable
 fun TextField(
@@ -28,6 +30,25 @@ fun TextField(
     colors: TextFieldColors = TextFieldDefaults.textFieldColors()
 ) 
 ```
+* value 
+* onValueChange
+* modifier
+* enabled
+* readOnly
+* textStyle
+* label
+* placeholder
+* leadingIcon
+* trailingIcon
+* isError
+* visualTransformation
+* keyboardOptions
+* keyboardActions
+* singleLine
+* maxLines
+* interactionSource
+* shape
+* colors
 
 ### 참고
 https://developer.android.com/jetpack/compose/text?hl=ko#enter-modify-text   
