@@ -30,25 +30,25 @@ fun TextField(
     colors: TextFieldColors = TextFieldDefaults.textFieldColors()
 ) 
 ```
-* value 
-* onValueChange
-* modifier
-* enabled
+* value - TextField의 표시되는 Text 내용
+* onValueChange - 
+* modifier - TextField의 Modifier 정의
+* enabled - TextField의 활성화 여부 
 * readOnly
-* textStyle
-* label
-* placeholder
-* leadingIcon
-* trailingIcon
-* isError
+* textStyle - TextField의 입력 Text의 스타일
+* label - 컨테이너 내부 또는 상단에 포커스 상태일때 표시되는 레이블
+* placeholder - TextField가 비어있을때 보여지는 Text
+* leadingIcon - TextField의 시작부분에 표시되는 아이콘
+* trailingIcon - TextField의 끝부분에 표시되는 아이콘
+* isError - 
 * visualTransformation
 * keyboardOptions
 * keyboardActions
-* singleLine
-* maxLines
-* interactionSource
-* shape
-* colors
+* singleLine - TextField의 singleLine 여부
+* maxLines - TextField의
+* interactionSource - 컴포넌트가 눌렸거나 드래그 됬을 때 필요한 정의
+* shape - TextField의 색깔 정의
+* colors - TextField의 색깔 정의
 
 ### 참고
 https://developer.android.com/jetpack/compose/text?hl=ko#enter-modify-text   
