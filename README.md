@@ -33,7 +33,15 @@
 
 ### [SOLID 원칙](https://github.com/Lsh15/Android-Study/blob/main/Week13/SOLID%EC%9B%90%EC%B9%99.md)
 
+### [Garbage Collection](https://github.com/Lsh15/Android-Study/blob/main/Week14/Garbage%20Collection.md)
 
+### [StrongReference | WeakReference](https://github.com/Lsh15/Android-Study/blob/main/Week14/StrongReference%20%7C%20WeakReference.md)
+
+### [Dagger Hilt](https://github.com/Lsh15/Android-Study/blob/main/Week15/Dagger%20Hilt.md)
+
+### [Dependency Injection](https://github.com/Lsh15/Android-Study/blob/main/Week15/Dependency%20Injection.md)
+
+### [Compose_Basis](https://github.com/Lsh15/Android-Study/blob/main/Week16/Compose_Basis.md)
 
 
 
