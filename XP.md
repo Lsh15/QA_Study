@@ -14,7 +14,7 @@ XP(eXtreme Programming)는 애자일 방법론의 유형 중 하나로 미국의
 * Collective Ownership (공동 소유) - 시스템에 있는 코드는 누구라도 언제든지 수정이 가능하다는 원리
 * Continuous Integration (지속적인 통합) - 모듈 단위로 나눠서 개발된 코드들은 지속적으로 통합해야된다는 원리
 * Planning Process (계획 세우기) - 고객이 요구하는 비즈니스 가치를 정의하고, 개발자가 필요한 것은 무엇이며 어떤 부분에서 지연될 수 있는지 알려줘야 한다는 원리
-* Small Releases (소규모 릴리즈) - 작은 시스템을 만들어 릴리즈 기간을 짧게 반복함으로써 고객의 요구 변화에 신속히 대응
+* Small Releases (작은 릴리즈) - 작은 시스템을 만들어 릴리즈 기간을 짧게 반복함으로써 고객의 요구 변화에 신속히 대응
 * System Metaphor (시스템 메타포어) - 공통(Meta)적인 이름 체계와 서술서를 통해 고객과 개발자 간의 의사소통을 원활하게 한다는 원리
 * Simple Design (간단한 디자인) - 요구사항에 가장 단순한 시스템을 설계한다는 원리
 * Test-Driven Development (테스트 주도 개발) - 개발자가 실제 코드를 작성하기 전에 테스트 케이스를 먼저 작성하므로 자신이 무엇을 해야할지 정확히 파악, 테스트가 지속적으로 진행될 수 있도록 한다는 원리
@@ -26,11 +26,11 @@ XP(eXtreme Programming)는 애자일 방법론의 유형 중 하나로 미국의
 ## 개발 순서
 1. 고객의 요구사항 및 테스트 시나리오 작성
 2. 기능 및 전체 개발에 대한 계획 수립
-3. risk를 줄이기 위해 Iteration 들어가기 전에 사전 개발 및 테스트 진행
-4. 릴리즈를 세분화하여 1~4주 정도의 기간으로 진행
+3. Risk를 줄이기 위해 Iteration 들어가기 전에 사전 개발 및 테스트 진행
+4. 릴리즈를 세분화하여 1 ~ 4주 정도의 기간으로 진행
 5. 테스트 시나리오를 기반으로 인증 테스트
 6. 테스트 중 생긴 결함은 다음 Iteration 에 추가, 테스트 완료 시 다음 Iteration 진행 
 
 ### 참고
-https://devinus.tistory.com/7   
-
+https://devinus.tistory.com/7    
+https://mobile-app-developer.tistory.com/56
