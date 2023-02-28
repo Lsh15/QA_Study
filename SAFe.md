@@ -20,8 +20,18 @@ SAFe®(Scaled Agile Framework®) 는 애자일 방법론을 구현하기 위한 
 * 의사 결정 분산 - 의사 결정을 분산시켜 큐 길이를 줄이고 경제적 접근 방식을 취하면 팀이 작업을 완료하는 데 필요한 자율성을 얻을 수 있다. 리더는 전략적으로 중요한 주제에 대한 의사 결정 권한을 갖고 다른 모든 것에 관해서는 팀이 정보를 바탕으로 선택할 수 있도록 해야 한다.
 
 ## 작동 순서
-
-
+1. 티핑 포인트에 도달 (Reaching the Tipping Point)
+2. 린-애자일 변경 에이전트 교육 (Train Lean-Agile Change Agents)
+3. 경영진, 관리자 및 리더 교육 (Train Executives, Managers, and Leaders)
+4. 린-애자일 액설런스 센터 만들기 (Create a Lean-Agile Center of Excellence)
+5. 가치 흐름 및 ART(Agile Release Trains) 식별 (Identify Value Streams and ART)
+6. 구현 계획 만들기 (Create the Implementation Plan)
+7. ART 시작 준비 (Prepare for ART Launch)
+8. 팀 교육 및 ART 시작 (Train Teams and Launch the ART)
+9. ART 실행 코치 (Coach ART Execution)
+10. 더 많은 ART와 가치 흐름 시작 (Launch More ARTs and Value Streams)
+11. 포트폴리오로 확장 (Extend to the Portfolio)
+12. 유지 및 개선 (Accelerate)
 
 ### 참고
 https://www.atlassian.com/ko/agile/agile-at-scale/what-is-safe     
