@@ -1,5 +1,5 @@
-# Waterfall Model
-Waterfall Model은 소프트웨어 개발 프로세스를 관리하는 데 사용되는 순차적 소프트웨어 개발 모델이다.    
+# Waterfall Model 
+Waterfall Model(폭포수 모델)은 소프트웨어 개발 프로세스를 관리하는 데 사용되는 순차적 소프트웨어 개발 모델이다.    
 1970년대에 등장하여 가장 오래되고 가장 널리 사용되는 소프트웨어 개발 모델 중 하나이다. Waterfall Model은 선형적이고 순차적인 접근 방식을 기반으로 하며, 개발 프로세스의 각 단계는 다음 단계가 시작되기 전에 완료된다.
 
 ## Model
@@ -23,6 +23,7 @@ Waterfall Model은 소프트웨어 개발 프로세스를 관리하는 데 사�
 * 고객 요구사항에 대한 상세한 반영이 어렵다.
 
 ## 적용 사례 
+Waterfall Model(폭포수 모델)은 미국 국방성이나 NASA에 고용된 대규모 소프트웨어 개발에 의해 널리 사용되었으며, 그외에 다수의 대규모 정부 프로젝트에서 사용되었다.
 
 ### 참고
 https://en.wikipedia.org/wiki/Waterfall_model    
