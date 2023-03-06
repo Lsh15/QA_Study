@@ -3,7 +3,11 @@ TDD란 Test Driven Development의 약자로 테스트 주도 개발이다.
 TDD(테스트 주도 개발)는 설계 이후 코드 개발 및 테스트케이스를 작성하는 기존의 개발 프로세스와 다르게 테스트케이스를 작성 한 후 실제 코드를 개발하여 리펙토링하는 절차로 개발한다. 
 
 ## TDD 매인 프로세스 
-![image](https://user-images.githubusercontent.com/50148363/223003247-fb87f6f1-9b10-49c5-a75c-ae51092873a3.png)
+* RED - 테스트 실패
+* GREEN - 테스트 성공
+* REFACTOR - 리팩토링
+
+![image](https://user-images.githubusercontent.com/50148363/223036500-568c4894-691e-400c-815c-293d716d8417.png)
 
 ## TDD 세부 프로세스 
 단위 테스트 작성 → 단위 테스트 실행 → 운영 코드 작성 → 단위 테스트 실행 → 설계 개선(리팩토링) → 단위 테스트 → …  실행을 반복한다.
