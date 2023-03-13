@@ -43,4 +43,10 @@
 ### 단점
 
 ### 참고
-
+https://en.wikipedia.org/wiki/Acceptance_testing   
+https://en.wikipedia.org/wiki/Exploratory_testing   
+https://en.wikipedia.org/wiki/Sanity_check   
+https://en.wikipedia.org/wiki/Regression_testing   
+https://en.wikipedia.org/wiki/Smoke_testing_(software)    
+https://en.wikipedia.org/wiki/Unit_testing    
+https://en.wikipedia.org/wiki/Integration_testing    
