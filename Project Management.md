@@ -39,12 +39,18 @@ YouTrack은 GitHub, Jira, Slack과 같은 다양한 도구와 통합되어 사�
 * 제한된 보고 기능
 
 ## Trello
-
+Trello는 비주얼 보드와 카드 시스템을 사용하여 프로젝트를 관리하는 웹 기반 프로젝트 관리 도구이다.     
+태스크 관리, 팀 협업 및 마감일 추적과 같은 기능을 제공한다.    
+Trello는 Slack, Google Drive, Dropbox와 같은 다양한 도구와 통합되어 사용가능하다. 
 
 ## 장단점
 ### 장점
+* 단순성 
+* 사용 편의성 
+* 유연성
 ### 단점
-
+* 제한된 보고 기능 
+* 시간 추적 및 사용자 지정 워크플로우와 같은 기능 부재
 ### 참고
 https://en.wikipedia.org/wiki/Atlassian    
 https://en.wikipedia.org/wiki/Assembla   
