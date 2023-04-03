@@ -66,8 +66,17 @@ Newman은 사용자가 명령줄 인터페이스를 사용하여 Postman컬렉�
 * 명령줄 인터페이스에 대한 지식 필요
 
 ## REST Assured
+ REST Assured는 웹 서비스, API 테스트에 사용되는 Java 기반 자동화 테스트 도구이다.    
+자동화된 테스트, 요청/응답 검증, 테스트 보고와 같은 기능을 통해 API 테스트를 생성하고 실행하는데 쉬운 API를 제공한다.    
+REST Assured는 데이터 기반 테스트, BDD(Behavior-Driven Development)와 같은 기능을 지원힌다. 
  
+## 장단점
+### 장점
+* 다른 Java 기반 테스트 프레임워크 및 도구와 통합할 수 있는 기능으로, Java 개발자에게 인기 있는 선택입니다. 
 
+### 단점
+* Java 프로그래밍에 대한 지식이 필요
+* Java 이외의 프로젝트에는 적합하지 않다.
 
 ### 참고
 https://github.com/karatelabs/karate   
