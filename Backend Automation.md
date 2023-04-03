@@ -72,7 +72,7 @@ REST Assured는 데이터 기반 테스트, BDD(Behavior-Driven Development)와 
  
 ## 장단점
 ### 장점
-* 다른 Java 기반 테스트 프레임워크 및 도구와 통합할 수 있는 기능으로, Java 개발자에게 인기 있는 선택입니다. 
+* 다른 Java 기반 테스트 프레임워크와 통합 가능 
 
 ### 단점
 * Java 프로그래밍에 대한 지식이 필요
