@@ -104,3 +104,11 @@ WebPageTest는 웹 사이트 성능을 분석하는 오픈 소스 웹 기반 도
 * 로컬 테스트를 위해 서버를 설정해야 함
 
 ### 참고
+https://en.wikipedia.org/wiki/Apache_JMeter       
+https://en.wikipedia.org/wiki/Vegeta_(software)        
+https://docs.locust.io/en/stable/what-is-locust.html      
+https://k6.io/docs/      
+https://www.artillery.io/docs/guides/overview/why-artillery    
+https://en.wikipedia.org/wiki/Gatling_(software)    
+https://en.wikipedia.org/wiki/Google_Lighthouse     
+https://docs.webpagetest.org/getting-started/   
