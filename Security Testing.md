@@ -27,6 +27,13 @@ Vulnerability Scanning(취약성 검사)을 정기적으로 수행하여 발견�
 * 새로운 취약성이 지속적으로 발견되기 때문에 모든 잠재적 취약성을 식별 불가능
 * 식별된 취약성을 분석하고 해결하는 데 많은 시간이 소요
 
+## OWASP (Open Web Application Security Project) 10 
+
+
+## Attack Vectors
+
+## Secrets Management
+
 
 
 ### 참고
