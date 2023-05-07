@@ -28,7 +28,10 @@ Vulnerability Scanning(취약성 검사)을 정기적으로 수행하여 발견�
 * 식별된 취약성을 분석하고 해결하는 데 많은 시간이 소요
 
 
+
 ### 참고
-https://www.okta.com/kr/identity-101/authentication-vs-authorization/      
+https://www.okta.com/kr/identity-101/authentication-vs-authorization/    
+https://www.beyondtrust.com/resources/glossary/vulnerability-scanning      
+
 
 
