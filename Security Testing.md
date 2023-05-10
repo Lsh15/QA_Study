@@ -28,7 +28,28 @@ Vulnerability Scanning(취약성 검사)을 정기적으로 수행하여 발견�
 * 식별된 취약성을 분석하고 해결하는 데 많은 시간이 소요
 
 ## OWASP (Open Web Application Security Project) 10 
+OWASP Top 10은 OWASP(Open Web Application Security Project)에서 개발한 가장 중요한 웹 애플리케이션 보안 위험 목록이다.    
+상위 10가지 위험 요소:
+1. Injection (주사)
+2. Broken authentication and session management (고장난 인증과 세션 관리)
+3. Cross-site scripting (사이트 간 스크립팅(XSS))
+4. Broken access control (고장난 접근통제)
+5. Security misconfiguration (보안 구성 오류)
+6. Insecure cryptographic storage (안전하지 않은 암호화 저장소)
+7. Insufficient logging and monitoring (불충분한 로깅과 모니터링)
+8. Insecure communication (불안정한 의사소통)
+9. Using components with known vulnerabilities (알려진 취약성이 있는 구성 요소 사용)
+10. Insufficient protection of sensitive data (민감한 데이터에 대한 불충분한 보호)
 
+## 장단점
+### 장점
+* 가장 중요한 웹 응용프로그램 보안 위험에 대한 포괄적이고 업데이트된 목록 제공
+* 가장 중요한 보안 문제에 우선 순위를 지정하고 집중할 수 있도록 지원
+* 보안 응용프로그램을 설계, 개발 및 테스트할 수 있도록 지원
+
+### 단점
+* 상위 10개의 리스크만 다루며, 조직과 서비스에 특정한 다른 리스크가 존재 가능
+* 목록은 시간이 지남에 따라 변경될 수 있으며, 조직은 변경사항과 업데이트를 지속적으로 확인해야 함
 
 ## Attack Vectors
 
