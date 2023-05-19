@@ -65,7 +65,7 @@ Attack Vectors는 네트워크 기반 공격, 애플리케이션 수준 공격, 
 * 일부는 탐지와 방지하기 어려울 수 있다.
 
 ## Secrets Management
-Secrets Management는 암호, API 키와 기타 자격 증명과 같은 중요한 정보를 안전하게 저장하고 관리하는 프로세스이다.    
+Secrets Management는 암호, API 키와 기타 자격 증명 같은 중요한 정보를 안전하게 저장하고 관리하는 프로세스이다.    
 Secrets Management는 키 관리 시스템과 비밀 관리 서비스 같은 다양한 도구를 사용하여 수행할 수 있다.
 
 ## 장단점
