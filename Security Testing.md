@@ -81,6 +81,9 @@ Secrets Management는 키 관리 시스템과 비밀 관리 서비스 같은 다
 ### 참고
 https://www.okta.com/kr/identity-101/authentication-vs-authorization/    
 https://www.beyondtrust.com/resources/glossary/vulnerability-scanning      
+https://owasp.org/www-project-top-ten/   
+https://en.wikipedia.org/wiki/Attack_vector   
+https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html
 
 
 
