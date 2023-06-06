@@ -1,6 +1,7 @@
 # Scrum
 Agile(애자일)의 대표적인 관리 Practice인 Scrum(스크럼)은 특정 개발 언어나 방법론에 의존적이지 않으며, 제품 개발 뿐만 아니라 일반적인 프로젝트 관리에도 사용 가능한 프로세스 프레임워크이다.    
 Scrum은 작은 주기(Sprint)로 개발 및 검토를 하며 효율적인 협업 방법을 제공한다.
+![image](https://github.com/Lsh15/Test_Study/assets/50148363/f0069b62-40a2-410a-8ab8-311cd75bd7e8)
 
 ## History
 Agile(애자일) 방법으로 많이 활용되고 있는 스크럼은 제프 서덜랜드와 켄 슈와버에 의해 창안되었다.     
