@@ -1,6 +1,8 @@
 # XP(eXtreme Programming)
 XP(eXtreme Programming)는 변화하는 고객 요구 사항에 대한 대응력과 소프트웨어 품질을 개선하기 위한 개발 방법론입니다.   
 XP(eXtreme Programming)는 애자일 방법론의 유형 중 하나로 미국의 소프트웨어 엔지니어인 1999년 Ken Beck이 제안한 소프트웨어 개발 방법론이다.
+![image](https://github.com/Lsh15/Test_Study/assets/50148363/8d60cca5-aa4a-4d9a-9a66-57e8e5fe3ca5)
+
 
 ## 5가지 핵심 가치
 * Communication (의사소통) - 개발자, 관리자, 고객 간의 원활한 소통을 지향한다. 
